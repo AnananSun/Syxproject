@@ -1,0 +1,45 @@
+// 引入我们的混入函数
+@import 'mixins/clear.less';
+// 最外层的包裹元素
+#wrapper{
+    // 头部部分
+    #header{
+        // 上面部分的头部
+        .headTop{
+            background: #eaeaea;
+            height: 30px;
+            // 版心元素
+            .headTopmain{
+                width: 1200px;
+                margin: 0 auto;// 居中的方法
+                line-height: 30px;//把一整行都调到垂直居中的部分，因为父盒子也是30，我们把行高调成30就稳定居中了
+                //overflow: hidden;//因为他的子元素都开启了浮动，所以他的高度会塌陷，加入overflow：hidden解决问题
+                .clearfix();//另一种解决高度塌陷的方法，并且使用了函数封装混入
+                // 左
+                .headTopmainleft{
+                    
+                    h5{
+                        float: left;
+                        color: black;
+                        margin-right: 5px;//使得他和两个a标签的距离拉开
+                    }
+                    div{
+                        a{
+                            float: left;
+                            &:first-child{
+                                //仔细分析下面三个属性，细线是用右边框画出来的，线与左边文字的内容是依靠padding来控制的，与右边下一个元素的文字距离是依靠margin来控制的，这是标准盒模型的写法
+                                padding-right: 5px;
+                                border-right: 1px solid #b3aeab;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+                // 右
+                .headTopmainright{
+                    float: right;
+                }
+            }
+        }
+    }
+}

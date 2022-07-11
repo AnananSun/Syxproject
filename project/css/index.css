@@ -1,0 +1,30 @@
+#wrapper #header .headTop {
+  background: #eaeaea;
+  height: 30px;
+}
+#wrapper #header .headTop .headTopmain {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+#wrapper #header .headTop .headTopmain::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#wrapper #header .headTop .headTopmain .headTopmainleft h5 {
+  float: left;
+  color: black;
+  margin-right: 5px;
+}
+#wrapper #header .headTop .headTopmain .headTopmainleft div a {
+  float: left;
+}
+#wrapper #header .headTop .headTopmain .headTopmainleft div a:first-child {
+  padding-right: 5px;
+  border-right: 1px solid #b3aeab;
+  margin-right: 5px;
+}
+#wrapper #header .headTop .headTopmain .headTopmainright {
+  float: right;
+}

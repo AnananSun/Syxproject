@@ -1,0 +1,9 @@
+// 这个混入函数用来复用解决高度塌陷问题,原理一会掌握，效果等同于overflow：hidden
+.clearfix(){
+    &::after{
+        clear: both;
+        display: block;
+        content: "";
+    }
+}
+// 具体用法使用引入 
