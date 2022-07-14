@@ -28,3 +28,101 @@
 #wrapper #header .headTop .headTopmain .headTopmainright {
   float: right;
 }
+#wrapper #header .headTop .headTopmain .headTopmainright nav {
+  font-size: 0;
+}
+#wrapper #header .headTop .headTopmain .headTopmainright nav a {
+  font-size: 12px;
+  margin-right: 10px;
+  border-right: 1px solid #b3aeab;
+  padding-right: 11px;
+}
+#wrapper #header .headTop .headTopmain .headTopmainright nav a:last-child {
+  border: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+#wrapper #header .headBottom .headBottommain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrapper #header .headBottom .headBottommain::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#wrapper #header .headBottom .headBottommain .logo {
+  float: left;
+}
+#wrapper #header .headBottom .headBottommain .logo a img {
+  width: 175px;
+  height: 56px;
+  margin: 25px 45px;
+}
+#wrapper #header .headBottom .headBottommain .search {
+  float: right;
+  margin-top: 35px;
+}
+#wrapper #header .headBottom .headBottommain .search input:first-child {
+  float: left;
+  box-sizing: border-box;
+  width: 490px;
+  height: 32px;
+  padding: 0px 4px;
+  border: 3px solid #ea4a36;
+}
+#wrapper #header .headBottom .headBottommain .search input:last-child {
+  width: 68px;
+  height: 32px;
+  color: #fff;
+  background-color: #ea4a36;
+  border: none;
+}
+#wrapper #header .headBottom .headBottommain .search input::-webkit-input-placeholder {
+  color: yellowgreen;
+}
+#wrapper #navWrap {
+  border-bottom: 2px solid #e1251b;
+}
+#wrapper #navWrap .navWrapmain {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrapper #navWrap .navWrapmain::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+#wrapper #navWrap .navWrapmain a {
+  float: left;
+  margin: 0 22px;
+  font-size: 16px;
+  color: #333;
+  line-height: 50px;
+}
+#wrapper #navWrap .navWrapmain a:first-child {
+  float: left;
+  height: 50px;
+  width: 210px;
+  background-color: #e1251b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+#wrapper #content .contentmain {
+  width: 1200px;
+  margin: 15px auto 0px auto;
+}
+#wrapper #content .contentmain .nvapath {
+  padding: 9px 15px 9px 0;
+  font-size: 0;
+}
+#wrapper #content .contentmain .nvapath a {
+  font-size: 12px;
+}
+#wrapper #content .contentmain .nvapath i {
+  padding: 0 5px;
+  font-size: 12px;
+}

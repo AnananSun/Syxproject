@@ -38,6 +38,116 @@
                 // 右
                 .headTopmainright{
                     float: right;
+                    nav{
+                        // 为了去掉a元素之间的小空隙，因为是行内元素，所以他会产生字体间距
+                        font-size: 0;
+                        a{
+                            font-size: 12px;
+                            margin-right: 10px;
+                            border-right: 1px solid #b3aeab;
+                            padding-right: 11px;
+                            // 把最后的那个链接之后的细线去掉
+                            &:last-child{
+                                border: none;
+                                margin-left: 0;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .headBottom{
+            .headBottommain{
+                width: 1200px;
+                // 版心如何定位到心（中间），利用我们整体页面设置的版心宽度，然后使其margin左右为auto
+                margin: 0 auto;
+                .clearfix();
+                .logo{
+                    float: left;
+                    a{
+                        img{
+                            width: 175px;
+                            height: 56px;
+                            margin: 25px 45px;
+                        }
+                    }
+                }
+                .search{
+                    float: right;
+                    margin-top: 35px;
+                    input{
+                        // 搜索框
+                        &:first-child{
+                            float: left;
+                            box-sizing: border-box;
+                            width: 490px;
+                            height: 32px;
+                            padding: 0px 4px;
+                            border: 3px solid #ea4a36;
+                        }
+                        // 提交按钮
+                        &:last-child{
+                            width: 68px;
+                            height: 32px;
+                            color: #fff;
+                            background-color: #ea4a36;
+                            //不知道为啥产生了黑色边框，使用boder none去掉
+                            border: none;
+                        }
+                        // 修饰提示词的颜色
+                        &::-webkit-input-placeholder{
+                            color: yellowgreen;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    #navWrap{
+        border-bottom: 2px solid #e1251b;
+        .navWrapmain{
+            width: 1200px;
+            margin: 0 auto;
+            .clearfix();//解决塌陷
+            a{
+                float: left;
+                margin: 0 22px;
+                font-size: 16px;
+                color: #333;
+                line-height: 50px;
+                &:first-child{//单独对“全部商品分类”进行设置
+                    float: left;
+                    height: 50px;
+                    width: 210px;
+                    background-color:#e1251b ;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 50px;
+                }
+
+
+            }
+        }
+    }
+    #content{
+        
+        .contentmain{
+            width: 1200px;
+            margin: 15px auto 0px auto;
+            .nvapath{
+                padding:  9px 15px 9px 0;
+                font-size: 0;// 为了消除行标签之间的小间隙，先把父元素的字体大小设为0，再将所有的元素字体大小设回去
+                a{
+                    font-size: 12px;
+                }
+                i{
+                    padding: 0 5px;
+                    font-size: 12px;
                 }
             }
         }
