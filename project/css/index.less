@@ -152,4 +152,52 @@
             }
         }
     }
+    #center{
+        // 版心设置
+        width: 1200px;
+        margin: 0 auto;
+        .left{
+            margin: 5px 0 15px;
+            width: 400px;
+            float: left;
+            .leftTop{
+                // 子绝父相中的父相
+                position: relative;
+                width: 400px;
+                .smallPic{
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #dfdfdf;
+                    position: relative;
+                    img{
+                        
+                    }
+                    .mask{
+                        // mask和小图框之间是定位关系
+                        position: absolute;
+                        width: 200px;
+                        height: 200px;
+                        background-color: rgba(255, 255, 255, .5);
+                        border: 1px solid #ddd;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                .bigPic{
+                    // 图片大小是800x800，大于大图片的边框，使用溢出隐藏
+                    overflow: hidden;
+                    position: absolute;
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #ddd;
+                    left: 420px;
+                    top: 0px;
+                    img{
+                        width: 800px;
+                        height: 800px;
+                    }
+                }
+            }
+        }
+    }
 }
