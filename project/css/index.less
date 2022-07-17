@@ -156,6 +156,7 @@
         // 版心设置
         width: 1200px;
         margin: 0 auto;
+        .clearfix();
         .left{
             margin: 5px 0 15px;
             width: 400px;
@@ -193,8 +194,52 @@
                     left: 420px;
                     top: 0px;
                     img{
+                        position: absolute;
                         width: 800px;
                         height: 800px;
+                    }
+                }
+            }
+            .leftBottom{
+                width: 400px;
+                margin-top: 5px;
+                a{
+                    width: 10px;
+                    height: 54px;
+                    border: 1px solid #ccc;
+                    background-color: #ebebeb;
+                    text-align: center;
+                    line-height: 54px;
+                    float: left;
+                    &:first-child{
+                        margin-right: 4px;
+                    }
+                    &:last-child{
+
+                    }
+                }
+                .piclist{
+                    width: 372px;
+                    height: 56px;
+                    float: left;
+                    overflow: hidden;//溢出隐藏
+                    ul{
+                        font-size: 0;//解决子元素变成行内元素的后面的字体大小引起的行内间距问题
+                        white-space: nowrap;//让其子元素强制不换行
+                        li{
+                            width: 50px;
+                            height: 50px;
+                            border: 1px solid #ccc;
+                            padding: 2px;
+                            margin-right: 20px;
+                            display: inline-block; //让li变成行内元素，横着排一排，这样导致了图片装不下换行
+                            //并且导致了行内元素间距受到影响，那种字体大小的影响
+
+                            img{
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
                     }
                 }
             }
