@@ -177,5 +177,45 @@ window.onload = function(){
         }
     }
 
+    //点击缩略图左右点击按钮移动事件
+    SsmallMove()
+    function SsmallMove(){
+        //得知道ul和div定位关系以及位置的移动
+        //关键要算出ul要移动的距离
 
+        // 获取按钮元素
+        var SsmallMoveleft = document.querySelector("#SsmallMoveleft")
+        var SsmallMoveright = document.querySelector("#SsmallMoveright")
+        // 获取ul元素
+        var Ssmallul = document.querySelector(".Ssmallul")
+        // 获取div元素
+        var piclist = document.querySelector(".piclist")
+        // 获取li元素,因为是动态添加的,直接使用选择器来选择 All 所有的li节点
+        var liNode = document.querySelectorAll("#wrapper #center .left .leftBottom .piclist ul li")
+
+        // 重点！！运动发生起点
+        // 每次点击运动两个步长，也就是两个li的宽度加上两个间隔
+        // 边界值
+        var start = 0//运动起点
+        var step = (liNode[0].offsetWidth + 20) * 2//每次移动距离
+        // 总体的运动距离 = ul 的宽度 - div框的宽度 = (图片总数减去div里显示的数) * （li宽度+20）
+        var endPostion = (liNode.length - 5) * (liNode[0].offsetWidth + 20)
+
+        // 绑定事件
+        SsmallMoveleft.onclick = function(){
+            start = start - step
+            if(start<0){
+                start = 0
+            }
+            Ssmallul.style.left = -start + "px"
+        }
+        SsmallMoveright.onclick = function(){
+            start = start + step
+            if(start>endPostion){
+                start = endPostion
+            }
+            // ul向左移动
+            Ssmallul.style.left = -start + "px"
+        }
+    }
 }

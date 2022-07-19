@@ -219,11 +219,14 @@
                     }
                 }
                 .piclist{
+                    position: relative;
                     width: 372px;
                     height: 56px;
                     float: left;
                     overflow: hidden;//溢出隐藏
                     ul{
+                        left: 0%;
+                        position: absolute;
                         font-size: 0;//解决子元素变成行内元素的后面的字体大小引起的行内间距问题
                         white-space: nowrap;//让其子元素强制不换行
                         li{
@@ -242,6 +245,104 @@
                         }
                     }
                 }
+            }
+        }
+        .right{
+            width: 700px;
+            float: right;
+            .rightTop{
+                h3{
+                    font-size: 14px;
+                    line-height: 21px;
+                    margin-top: 15px;
+                }
+                > p{
+                    color:#e1251b ;
+                    margin-top: 15px;
+                }
+                .priceWrap{
+                    margin-top: 10px;
+                    line-height: 28px;
+                    background-color: #fee9ec;
+                    padding: 9px;
+                    .priceTop{
+                        > span{
+                            margin-right: 15px;
+                            float: left;//“价格”的浮动
+
+                        }
+                        .price{
+                            .clearfix();
+                            >span{
+                                float: left;
+                                font-size: 16px;//“￥”的浮动
+                                color: #cc1122;
+                            }
+                            p{
+                                float: left;
+                                font-size: 24px;//5299的浮动
+                                color: #cc1122;
+                            }
+                            i{
+                                float: left;
+                                font-size: 12px;
+                                color: #cc1122;
+                            }
+                            .leiji{
+                                float: right;
+                                >span{
+                                    font-size: 12px;
+                                    color: #333;
+                                }
+                            }
+                        }
+                       
+                    }
+                    .priceBottom{
+                        .clearfix();
+
+                        // 促销
+                        > span{
+                            float: left;
+                            margin-right: 15px;
+                        }
+                        p{
+                            width: 520px;
+                            line-height: 28px;
+                            float: left;
+                            >span{
+                                color: #999;
+                                // float: left;
+                                // 加价购
+                                &:first-child{
+                                    background-color: #c81623;
+                                    padding: 3px;
+                                    color: #fff;
+                                    // float: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                .support{
+                    border-bottom: 1px solid #ededed;
+                    padding-bottom: 5px;
+                    > span{
+
+                    }
+                    > p{
+
+                    }
+                }
+                .adress{
+                    > span{
+
+                    }
+                    > p{
+
+                    }
+                }
+                
             }
         }
     }
